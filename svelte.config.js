@@ -1,7 +1,5 @@
-import adapter from 'svelte-adapter-github';
+import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-
-const dev = process.env.NODE_ENV === 'development';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,20 +11,7 @@ const config = {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
 		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
-		adapter: adapter({
-			pages: 'docs',
-			assets: 'docs',
-			fallback: null,
-			precompress: false,
-			domain: '',
-			jekyll: false
-		}),
-		paths: {
-			base: dev ? '' : '/my-todos'
-		},
-		// If you are not using a .nojekyll file, change your appDir to something not starting with an underscore.
-		// For example, instead of '_app', use 'app_', 'internal', etc.
-		appDir: 'internal'
+		adapter: adapter(),
 	}
 };
 
