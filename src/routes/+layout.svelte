@@ -1,11 +1,12 @@
+<script context="module">
+	export const prerender = true;
+</script>
+
 <script lang="ts">
 	import '../app.css';
 	import ChangeThemeButton from '$lib/components/ChangeThemeButton.svelte';
 	import { onMount } from 'svelte';
 	import { theme } from '$lib/stores';
-
-	export const prerender = true;
-
 
 	let isThemeLoaded = false;
 
