@@ -31,9 +31,10 @@ Svelte's reactivity ensures that the task list updates in real-time, reflecting 
 
 ### Theme Management & Layout
 
-The design is dynamic, adjusting according to the user's theming preferences:
+The design is dynamic and changes according to the user's theme preference:
 
-- **Persistent Theming**: User's theme choices are stored in the browser's `localStorage`.
+- **Persistent Theme**: The user's theme choice is stored in the browser's `localStorage`.
+
 - **Default theme**: In the absence of a user-selected theme, the application intelligently uses the OS's theme preference via the `window.matchMedia` method.
 
 - **Dynamic Layout Updates**: When the button to change theme is clicked, the layout adjusts colors for an optimal viewing experience. The header has a button to toggle the dark theme on and off.
