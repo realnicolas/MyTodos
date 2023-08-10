@@ -4,6 +4,8 @@
 	import { onMount } from 'svelte';
 	import { theme } from '$lib/stores';
 
+	export const prerender = true;
+
 	let isThemeLoaded = false;
 
 	function getTheme() {
