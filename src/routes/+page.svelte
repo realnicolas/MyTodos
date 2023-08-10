@@ -33,9 +33,11 @@
 				<h1>Enjoy your day!!!</h1>
 			</div>
 		{:else}
-			{#each $myTodos as todo (todo.id)}
-				<TodoItem {...todo} />
-			{/each}
+			<ul class="divide-y">
+				{#each $myTodos as todo (todo.id)}
+					<TodoItem {...todo} />
+				{/each}
+			</ul>
 		{/if}
 	{/if}
 </div>

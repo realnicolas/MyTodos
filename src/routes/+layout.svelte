@@ -27,7 +27,7 @@
 
 {#if isThemeLoaded}
 	<header
-		class="flex justify-center items-center py-3 px-4 bg-green-500 dark:bg-black shadow drop-shadow dark:shadow-stone-900"
+		class="flex justify-center items-center py-3 px-4 bg-green-500 dark:bg-purple-900 shadow drop-shadow dark:shadow-stone-900"
 	>
 		<h1 class="text-3xl font-bold dark:text-white">MyTodos</h1>
 		<ChangeThemeButton />
