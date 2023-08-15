@@ -5,6 +5,7 @@
 	import { onMount } from 'svelte';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import { setInitialClassState } from '@skeletonlabs/skeleton';
+	import { Modal } from '@skeletonlabs/skeleton';
 
 	let renderReady = false;
 
@@ -26,8 +27,9 @@
 		<h1 class="text-3xl font-bold">MyTodos</h1>
 		<LightSwitch />
 	</header>
-
+	
 	<main class=" min-h-screen font-bold">
+		<Modal />
 		<slot />
 	</main>
 {/if}

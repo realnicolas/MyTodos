@@ -13,7 +13,7 @@
 			<h1>Enjoy your day!!!</h1>
 		</div>
 	{:else}
-		<ul class="divide-y">
+		<ul class="divide-y-2">
 			{#each $myTodos as todo (todo.id)}
 				<TodoItem {...todo} />
 			{/each}
