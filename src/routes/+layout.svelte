@@ -1,39 +1,42 @@
 <script lang="ts">
 	import '../app.css';
-	import ChangeThemeButton from '$lib/components/ChangeThemeButton.svelte';
+	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css';
+	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import { onMount } from 'svelte';
-	import { theme } from '$lib/stores';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
+	import { setInitialClassState } from '@skeletonlabs/skeleton';
 
-	let isThemeLoaded = false;
-
-	function getTheme() {
-		const themeStored = localStorage.getItem('theme');
-		const osTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-		$theme = themeStored ? themeStored : osTheme;
-	}
+	let renderReady = false;
 
 	onMount(() => {
-		getTheme();
-		isThemeLoaded = true;
+		renderReady = true;
 	});
-
-	$: if (typeof window !== 'undefined' && isThemeLoaded) {
-		localStorage.setItem('theme', $theme);
-		$theme === 'dark'
-			? document.documentElement.classList.add('dark')
-			: document.documentElement.classList.remove('dark');
-	}
 </script>
 
-{#if isThemeLoaded}
+<svelte:head>
+	<title>MyTodos</title>
+	<meta name="description" content="Simple todo list manager built with Svelte." />
+	{@html `<script>(${setInitialClassState.toString()})();</script>`}
+</svelte:head>
+
+{#if renderReady}
 	<header
-		class="flex justify-center items-center py-3 px-4 bg-green-500 dark:bg-purple-900 shadow drop-shadow dark:shadow-stone-900"
+		class="flex justify-between bg-blue-400 dark:bg-black/40 dark:shadow-black shadow-md shadow-stone-400 [&>*]:mx-4 items-center py-3"
 	>
-		<h1 class="text-3xl font-bold dark:text-white">MyTodos</h1>
-		<ChangeThemeButton />
+		<h1 class="text-3xl font-bold">MyTodos</h1>
+		<LightSwitch />
 	</header>
 
-	<main class="dark:bg-stone-800 dark:text-white min-h-screen font-bold">
+	<main class=" min-h-screen font-bold">
 		<slot />
 	</main>
 {/if}
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+	header,
+	main {
+		font-family: 'Quicksand', sans-serif;
+	}
+</style>

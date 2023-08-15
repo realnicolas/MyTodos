@@ -3,7 +3,7 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](README.pt-br.md)
 
-This project is a simple todo list manager built with Svelte. 
+Simple todo list manager built with Svelte. 
 
 App Demo: https://my-todos-web.netlify.app/
 

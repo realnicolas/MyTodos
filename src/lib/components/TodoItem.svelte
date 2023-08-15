@@ -33,7 +33,7 @@
 	</div>
 	<button
 		on:click={handleDelete}
-		class=" bg-red-700 text-white p-1 w-[4rem] rounded-md hover:bg-red-500 transition-colors"
+		class="btn variant-filled-error w-[4rem] rounded-md p-1"
 	>
 		Delete
 	</button>

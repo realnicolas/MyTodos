@@ -3,12 +3,12 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](README.md)
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](README.pt-br.md)
 
-Este projeto é um simples gerenciador de tarefas construído com Svelte.
+Simples gerenciador de tarefas construído com Svelte.
 
 Demo do App: https://my-todos-web.netlify.app/
 
-## Uso
-
+## Uso  
+    
 - **Visualizando tarefas**: Todas as suas tarefas serão exibidas automaticamente. Se não houver tarefas, uma mensagem amigável será mostrada.
 - **Adicionando uma tarefa**: Insira a tarefa desejada na caixa de texto e clique no botão `Add` para criar uma nova tarefa.
 - **Marcando uma tarefa como Concluída/Incompleta**: Clique na caixa de seleção à esquerda de sua tarefa. Isso permitirá que você alterne seu status entre concluído e incompleto.
