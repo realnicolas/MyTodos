@@ -20,7 +20,7 @@
 
         <button
           type="submit"
-          class="btn bg-primary-500 py-1 text-on-primary-token md:w-[4rem]"
+          class="btn bg-primary-500 py-1 text-on-primary-token md:w-[5rem]"
         >
           Add
         </button>

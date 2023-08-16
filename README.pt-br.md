@@ -11,6 +11,7 @@ Demo do App: https://my-todos-web.netlify.app/
     
 - **Visualizando tarefas**: Todas as suas tarefas serão exibidas automaticamente. Se não houver tarefas, uma mensagem amigável será mostrada.
 - **Adicionando uma tarefa**: Insira a tarefa desejada na caixa de texto e clique no botão `Add` para criar uma nova tarefa.
+- **Editando uma tarefa**: Clique no botão <img src="src/lib/assets/editIcon.svg"> para editar uma tarefa.
 - **Marcando uma tarefa como Concluída/Incompleta**: Clique na caixa de seleção à esquerda de sua tarefa. Isso permitirá que você alterne seu status entre concluído e incompleto.
 - **Deletando uma tarefa**: Para remover uma tarefa da lista, clique no botão `Delete` situado no lado direito de sua tarefa.
 - **Mudando o tema**: Para alterar o tema, clique no botão no canto superior direito da aplicação.
@@ -43,7 +44,6 @@ O design é dinâmico, ajustando-se de acordo com as preferências de tema do us
 ## Status
 
 Ainda estou trabalhando no MyTodos, algumas das possíveis futuras melhorias  são:
-- Capacidade de editar tarefas.
 - Categorização de tarefas (Por exemplo: Trabalho, Pessoal).
 - Implementação de um recurso de prazo.
 

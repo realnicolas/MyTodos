@@ -42,7 +42,6 @@ The design is dynamic and changes according to the user's theme preference:
 ## Status
 
 I'm still working on MyTodos, some of the possible future improvements are:
-- Ability to edit todos.
 - Categorization of tasks (e.g., Work, Personal).
 - Implementing a deadline or reminder feature.
 
