@@ -58,10 +58,10 @@
 		</label>
 		<div class="[&>*]:p-2 flex items-center">
 			<button on:click={() => modalStore.trigger(editModal)} aria-label="Edit Todo">
-				<EditIcon class="text-green-700 dark:text-green-600" />
+				<EditIcon />
 			</button>
 			<button on:click={() => modalStore.trigger(deleteModal)} aria-label="Delete Todo">
-				<DeleteIcon class="text-red-700 dark:text-red-500" />
+				<DeleteIcon />
 			</button>
 		</div>
 	</div>
