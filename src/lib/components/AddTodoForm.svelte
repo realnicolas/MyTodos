@@ -15,12 +15,12 @@
         <input
           type="text"
           bind:value={newTodo}
-          class="border border-black dark:bg-stone-800 dark:border-white rounded p-1 flex-1"
+          class="border border-black dark:border-white bg-transparent rounded p-1 flex-1"
         />
 
         <button
           type="submit"
-          class="bg-blue-700 text-white md:w-[4rem] p-1 rounded-md hover:bg-blue-600 transition-colors"
+          class="btn bg-primary-500 py-1 text-on-primary-token md:w-[5rem]"
         >
           Add
         </button>
