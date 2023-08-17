@@ -26,7 +26,7 @@
 					{/if}
 				{/each}
 			</ul>
-			<Accordion class="bg-black/20 rounded" padding='py-2 px-1'>
+			<Accordion class="bg-black/20 rounded mt-1" padding='py-2 px-1'>
 				<AccordionItem class="focus:bg-none">
 					<svelte:fragment slot="summary">
 						Completed ({numberOfTodosCompleted})
