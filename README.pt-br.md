@@ -32,10 +32,7 @@ O design é dinâmico, ajustando-se de acordo com as preferências de tema do us
 
 ## Status
 
-Ainda estou trabalhando no MyTodos, algumas das possíveis futuras melhorias são:
-
-- Categorização de tarefas (Por exemplo: Trabalho, Pessoal).
-- Implementação de um recurso de prazo.
+MyTodos está finalizado.
 
 ## Licença
 

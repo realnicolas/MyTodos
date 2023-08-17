@@ -31,9 +31,7 @@ The design is dynamic and changes according to the user's theme preference using
 
 ## Status
 
-I'm still working on MyTodos, some of the possible future improvements are:
-- Categorization of tasks (e.g., Work, Personal).
-- Implementing a deadline or reminder feature.
+MyTodos is finished.
 
 ## License
 
