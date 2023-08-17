@@ -27,7 +27,7 @@
 		<h1 class="text-3xl font-bold">MyTodos</h1>
 		<LightSwitch />
 	</header>
-	
+
 	<main class=" min-h-screen font-bold">
 		<Modal />
 		<slot />

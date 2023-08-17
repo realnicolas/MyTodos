@@ -4,7 +4,7 @@
 	import type { ModalSettings } from '@skeletonlabs/skeleton';
 	import EditIcon from "$lib/assets/edit-icon.svg?component"
 	import DeleteIcon from "$lib/assets/delete-icon.svg?component"
-
+	
 	export let id: string;
 	export let text: string;
 	export let completed: boolean;
@@ -41,7 +41,7 @@
 	}
 </script>
 
-<li class="flex gap-4 [&>*]:flex [&>*]:justify-center py-1 break-all">
+<li class="flex [&>*]:flex font-bold [&>*]:justify-center py-2 break-all">
 	<div class="flex-1">
 		<input
 			type="checkbox"
@@ -52,11 +52,11 @@
 		/>
 		<label
 			for={id}
-			class="peer-checked:line-through text-xl flex-1 peer-checked:text-stone-500 cursor-pointer ml-2 flex items-center"
+			class="peer-checked:line-through flex-1 peer-checked:text-stone-500 cursor-pointer ml-2 flex items-center"
 		>
 			{text}
 		</label>
-		<div class="[&>*]:p-2 flex items-center">
+		<div class="flex gap-1 items-center">
 			<button on:click={() => modalStore.trigger(editModal)} aria-label="Edit Todo">
 				<EditIcon />
 			</button>
