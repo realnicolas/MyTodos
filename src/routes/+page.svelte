@@ -3,10 +3,7 @@
 	import TodoItem from '$lib/components/TodoItem.svelte';
 	import { myTodos } from '$lib/stores';
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
-	let numberOfTodosCompleted: number;
-	$: {
-		numberOfTodosCompleted = $myTodos.filter((todo) => todo.completed === true).length;
-	}
+	$: numberOfTodosCompleted = $myTodos.filter((todo) => todo.completed === true).length;
 </script>
 
 <div class="mx-auto max-w-[600px] [&>*]:mx-4">
