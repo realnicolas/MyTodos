@@ -21,7 +21,7 @@ App Demo: https://my-todos-web.netlify.app/
 "MyTodos" is a Svelte-based web application designed for intuitive task management. It's built using Svelte, TypeScript, and enhanced with Tailwind CSS and Skeleton UI.
 
 ### Data Management
-The todos are persisted using the browser's local storage. This provides a seamless experience, as users can revisit their tasks even after closing the browser, todos are also maintained in the `myTodos` store, serving as the primary data source for the application, this 
+The todos are persisted using local storage. This provides a seamless experience, as users can revisit their tasks even after closing the browser, todos are also maintained in the `myTodos` store, serving as the primary data source for the application, this 
 
 Svelte's reactive statements monitor the `myTodos` store for any changes. Whenever a change is detected, the updated list of todos is sent back to the local storage, ensuring that the todo list is updated in real time, reflecting any additions or deletions immediately.
 
