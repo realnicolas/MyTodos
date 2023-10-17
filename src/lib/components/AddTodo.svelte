@@ -1,10 +1,6 @@
 <script lang="ts">
-	import type { TodoType } from '$lib/types/TodoType';
-	import type { Writable } from 'svelte/store';
-	export let myTodos: Writable<TodoType[]>;
+	import { myTodos } from '$lib/TodoStore';
 	let inputValue: string;
-
-	$ : localStorage.setItem("my_todos", JSON.stringify(myTodos));
 
 	function addTodo() {
 		if (!inputValue.trim()) return;

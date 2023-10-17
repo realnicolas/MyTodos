@@ -24,7 +24,7 @@ function validateTodos(array: any[]): { valid: TodoType[]; invalid: any[] } {
 	return { valid, invalid };
 }
 
-function getTodos() {
+function getTodos(): TodoType[] | [] {
 	try {
 		const storedTodos = localStorage.getItem('my_todos');
 		if (storedTodos) {

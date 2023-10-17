@@ -3,10 +3,7 @@
 	import type { ModalSettings } from '@skeletonlabs/skeleton';
 	import EditIcon from '$lib/assets/edit-icon.svg?component';
 	import DeleteIcon from '$lib/assets/delete-icon.svg?component';
-
-	import type { TodoType } from '$lib/types/TodoType';
-	import type { Writable } from 'svelte/store';
-	export let myTodos: Writable<TodoType[]>;
+	import { myTodos } from '$lib/TodoStore';
 
 	export let id: string;
 	export let text: string;
