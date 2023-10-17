@@ -4,6 +4,8 @@
 	export let myTodos: Writable<TodoType[]>;
 	let inputValue: string;
 
+	$ : localStorage.setItem("my_todos", JSON.stringify(myTodos));
+
 	function addTodo() {
 		if (!inputValue.trim()) return;
 		$myTodos = [

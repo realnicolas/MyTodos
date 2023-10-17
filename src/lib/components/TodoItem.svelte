@@ -1,10 +1,13 @@
 <script lang="ts">
-	import { myTodos } from '$lib/stores';
 	import { modalStore } from '@skeletonlabs/skeleton';
 	import type { ModalSettings } from '@skeletonlabs/skeleton';
-	import EditIcon from "$lib/assets/edit-icon.svg?component"
-	import DeleteIcon from "$lib/assets/delete-icon.svg?component"
-	
+	import EditIcon from '$lib/assets/edit-icon.svg?component';
+	import DeleteIcon from '$lib/assets/delete-icon.svg?component';
+
+	import type { TodoType } from '$lib/types/TodoType';
+	import type { Writable } from 'svelte/store';
+	export let myTodos: Writable<TodoType[]>;
+
 	export let id: string;
 	export let text: string;
 	export let completed: boolean;

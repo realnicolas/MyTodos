@@ -1,7 +1,8 @@
 <script lang="ts">
 	import AddTodo from '$lib/components/AddTodo.svelte';
 	import TodoList from '$lib/components/TodoList.svelte';
-	import { myTodos } from '$lib/stores';
+	import { myTodos } from '$lib/TodoStore';
+	$: console.log($myTodos)
 </script>
 
 <div class="mx-auto max-w-[600px] [&>*]:mx-4">

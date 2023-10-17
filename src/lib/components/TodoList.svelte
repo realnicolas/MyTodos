@@ -11,7 +11,7 @@
 	<ul class="divide-y">
 		{#each $myTodos as todo (todo.id)}
 			{#if todo.completed === false}
-				<TodoItem {...todo} />
+				<TodoItem {...todo} {myTodos}/>
 			{/if}
 		{/each}
 	</ul>
