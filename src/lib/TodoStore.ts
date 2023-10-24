@@ -1,46 +1,46 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { z } from 'zod';
 import { writable } from 'svelte/store';
-import type { TodoType } from '$lib/types/TodoType';
-export const myTodos = writable<TodoType[]>(getTodos());
 
-function validateTodos(array: any[]): { valid: TodoType[]; invalid: any[] } {
-	const valid: TodoType[] = [];
-	const invalid: any[] = [];
+export const TodoSchema = z.object({
+	id: z.string(),
+	text: z.string(),
+	completed: z.boolean()
+});
 
-	array.forEach((item) => {
-		if (
-			typeof item === 'object' &&
-			typeof item.id === 'string' &&
-			typeof item.text === 'string' &&
-			typeof item.completed === 'boolean'
-		) {
-			valid.push(item);
-		} else {
-			invalid.push(item);
-		}
-	});
+type Todo = z.infer<typeof TodoSchema>;
 
-	return { valid, invalid };
-}
+export const myTodos = writable<Todo[]>(getTodos());
 
-function getTodos(): TodoType[] | [] {
+function getTodos() {
 	try {
-		const storedTodos = localStorage.getItem('my_todos');
-		if (storedTodos) {
-			const parsedTodos = JSON.parse(storedTodos);
-			const { valid, invalid } = validateTodos(parsedTodos);
+		if (typeof window !== 'undefined') {
+			const storedTodos = localStorage.getItem('my_todos');
+			if (storedTodos) {
+				const parsedTodos = JSON.parse(storedTodos);
 
-			if (invalid.length > 0) {
-				console.warn('Found invalid todos:', invalid);
+				const validTodos: Todo[] = [];
+				const invalidTodos: any[] = [];
+
+				parsedTodos.forEach((todo: any) => {
+					const todoValidation = TodoSchema.safeParse(todo);
+					if (todoValidation.success) {
+						validTodos.push(todo);
+					} else {
+						invalidTodos.push({ todo, error: todoValidation.error });
+					}
+				});
+
+				if (invalidTodos.length > 0) console.warn('Found invalid todos:', invalidTodos);
+
+				return validTodos;
+			} else {
+				return [];
 			}
-
-			return valid;
-		} else {
-			return []; // If there are no stored todos, set todos to an empty array
 		}
 	} catch (error) {
 		console.error('Failed to fetch todos from localStorage:', error);
-		return []; // If there's a JSON parsing error, set todos to an empty array
+		return [];
 	}
 }

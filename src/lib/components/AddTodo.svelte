@@ -4,11 +4,17 @@
 
 	function addTodo() {
 		if (!inputValue.trim()) return;
+
 		$myTodos = [
 			...$myTodos,
-			{ id: crypto.randomUUID(), text: inputValue.trim(), completed: false }
+			{
+				id: crypto.randomUUID(),
+				text: inputValue.trim(),
+				completed: false
+			}
 		];
-		inputValue = '';
+
+		inputValue = "";
 	}
 </script>
 
@@ -19,7 +25,7 @@
 		class="border border-black dark:border-white bg-transparent rounded p-1 flex-1"
 	/>
 
-	<button on:click={addTodo} class="btn bg-primary-500 py-1 text-on-primary-token md:w-[5rem]">
+	<button on:click={addTodo} class="btn bg-blue-700 dark:bg-primary-500 py-1 text-on-primary-token md:w-[5rem]">
 		Add
 	</button>
 </div>

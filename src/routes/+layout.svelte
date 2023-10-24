@@ -22,7 +22,7 @@
 
 {#if renderReady}
 	<header
-		class="flex justify-between bg-blue-400 dark:bg-black/40 dark:shadow-black shadow-md shadow-stone-400 [&>*]:mx-4 items-center py-3"
+		class="flex justify-between bg-yellow-500 dark:bg-black/40 dark:shadow-black shadow-md shadow-stone-400 [&>*]:mx-4 items-center py-3"
 	>
 		<h1 class="text-3xl font-bold">MyTodos</h1>
 		<LightSwitch />

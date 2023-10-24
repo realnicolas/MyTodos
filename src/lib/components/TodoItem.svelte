@@ -41,7 +41,7 @@
 	}
 </script>
 
-<li class="flex [&>*]:flex font-bold [&>*]:justify-center py-2 break-all">
+<li class="flex [&>*]:flex font-bold [&>*]:justify-center py-3 break-all">
 	<div class="flex-1">
 		<input
 			type="checkbox"
