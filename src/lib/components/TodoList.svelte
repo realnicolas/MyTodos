@@ -13,12 +13,12 @@
 </script>
 
 {#if $myTodos.length === 0}
-	<div class="text-center text-stone-700 dark:text-stone-300">
+	<div class="pt-6 text-center text-stone-700 dark:text-stone-300">
 		<h1>Nothing to do? Nice!</h1>
 		<h1>Enjoy your day!!!</h1>
 	</div>
 {:else}
-	<div>
+	<div class="py-5">
 		<ul>
 			{#each todosNotCompleted as todo (todo.id)}
 				<div

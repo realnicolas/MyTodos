@@ -18,7 +18,7 @@
 	}
 </script>
 
-<div class="py-6 flex flex-col gap-2 md:flex-row md:gap-4">
+<div class="pt-8 flex flex-col gap-2 md:flex-row md:gap-4">
 	<input
 		type="text"
 		bind:value={inputValue}

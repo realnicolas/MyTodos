@@ -28,7 +28,7 @@
 		<LightSwitch />
 	</header>
 
-	<main class=" min-h-screen font-bold">
+	<main class="font-bold">
 		<Modal />
 		<slot />
 	</main>
